@@ -1,7 +1,10 @@
-import { Inter } from 'next/font/google'
+import Script from 'next/script'
+import { Tektur } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+
+
+const tektur = Tektur({ subsets: ['cyrillic'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={tektur.className}>
+        <div className="movie-bg"></div>
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,113 +1,177 @@
-import Image from 'next/image'
+import Image from "next/image"
+
+import ScrollComponent from "./components/ScrollComponent"
+
+import Header from "./components/Header"
+import Date from "./components/Date"
+import Slider from "./components/Slider"
+import AnimateComponent from "./components/AnimateComponent"
+
+import TitleOfProjectComponent from "./components/TitleOfproject"
+import TitleOfMeComponent from "./components/TitlteOfMe"
+import TitleLetsTalkComponent from "./components/TitleLetsTalk"
+
+import ProjectSideLeftComponent from "./components/ProjectSideLeft"
+import ProjectSideRightComponent from "./components/ProjectSideRight"
+
+import ContentOfMeComponent from "./components/ContentOfMe"
+
+import ArrowIcon from "./components/ArrowIcon"
+import Circle from "./components/Circle"
+import MoreDetails from "./components/MoreDetail"
+
+import image1 from"../public/img/projects/concept-2.webp"
+import image2 from"../public/img/projects/concept-3.webp"
+import image3 from"../public/img/projects/concept-4.webp"
+import image4 from"../public/img/projects/concept-5.webp"
+import image5 from"../public/img/projects/concept-6.webp"
+import image6 from"../public/img/projects/concept-7.webp"
+import image7 from"../public/img/projects/concept-8.webp"
+
+import monument1 from "../public/img/monument/2.jpg"
 
 export default function Home() {
+
+  const sliderImages = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+  ]
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="">
+      <Header/>
+      <div className="text-white text-[9.5rem] font-semibold uppercase ml-[65px]">
+        <div className="animation-content-wrapper">
+          <h1 className="title-content">Hello<span className="text-[#F65252]">.</span></h1>
+        </div>
+        <div className="animation-content-wrapper">
+          <h1 className="title-content">I am Michail</h1>
+        </div>
+        <div className="flex  absolute left-[970px]">
+          <div className="animation-content-wrapper">
+            <div className="arrow-content">
+              <ArrowIcon/>
+            </div>
+          </div>
+          <div className="text-[1.4rem] leading-tight flex flex-col  ml-[2rem]">
+            <div className="animation-content-wrapper">
+              <h1 className="more-content">Developer</h1>
+            </div>
+            <div className="animation-content-wrapper">
+              <span className="more-content">UX/UI Designer</span>
+            </div>
+            <div className="animation-content-wrapper">
+              <span className="more-content">Freelance</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="conteiner">
+      
+      <section className="mt-[170px] pl-[120px] relative">
+          <div id='showConcept' className="relative inline-block">
+            <Circle/>
+            <div  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold
+            text-[#ffffff54] text-[23px] uppercase leading-tight">
+              <div className="animation-content-wrapper">
+                <span className="block show-project-content tracking-[3px]">мои</span>
+              </div>
+              <div className="animation-content-wrapper">
+                <span className="block show-project-content tracking-[3px]">проекты</span>
+              </div>
+            </div>
+            <Date />
+
+            <div className="text-[#ffffffb2] text-[17px] absolute whitespace-nowrap left-3/4 top-[250px]">
+              <div className="animation-content-wrapper">
+                <p id="about-content-1" className="about-content">I am a developer and UX/UI designer based in Italy.</p>
+              </div>
+              <div className="animation-content-wrapper">
+                <p id="about-content-2" className="about-content">National and international customers have relied on me for design,</p>
+              </div>
+              <div className="animation-content-wrapper">
+                <p id="about-content-3" className="about-content">implementation, and management of their digital products.</p>
+              </div>
+              <div  className=" -ml-[65px] animation-content-wrapper">
+                <p id="about-content-4" className="about-content">
+                  <span className="uppercase text-white font-bold text-[20px] link-contact">Contact </span>
+                  As a freelancer, I works also with web agencies, companies
+                </p>
+              </div>
+              <div className="animation-content-wrapper">
+                <p id="about-content-5" className="about-content">startups and individuals to create a blueprint for the digital business.</p>
+              </div>
+              <div className="animation-content-wrapper">
+                <p id="about-content-6" className="about-content">Also, Judge at CSSDA and Envato Author.</p>
+              </div>
+            </div>
+          </div>
+
+          <div id='concept' className="absolute top-0 right-0 mr-[65px]">
+            <Slider images={sliderImages}/>
+          </div>
+      </section>
+
+      <section className="mt-[400px] text-white">
+        <AnimateComponent>
+          <TitleOfProjectComponent/>
+        </AnimateComponent>
+
+        <div  className="mb-[150px] mx-auto max-w-[1100px] pl-[60px]">
+          <AnimateComponent>
+            <ProjectSideLeftComponent image={monument1} />
+          </AnimateComponent>
+        </div>
+
+        <div className="mb-[150px] mx-auto max-w-[1100px]">
+          <AnimateComponent>
+            <ProjectSideRightComponent image={monument1}/>
+          </AnimateComponent>
+        </div>
+
+        <div className=" mb-[150px] mx-auto max-w-[1100px] pl-[60px]">
+          <AnimateComponent>
+            <ProjectSideLeftComponent image={monument1} />
+          </AnimateComponent>
+        </div>
+      </section>
+
+      <section className="block mt-[400px] text-white max-w-[1220px] mx-auto">
+        <AnimateComponent>
+          <TitleOfMeComponent/>
+        </AnimateComponent>
+
+        <AnimateComponent>
+          <ContentOfMeComponent/>
+        </AnimateComponent>
+
+      </section>
+
+      <section className="mt-[400px] mb-[200px] text-white max-w-[1220px] mx-auto">
+        <AnimateComponent>
+          <TitleLetsTalkComponent/>
+        </AnimateComponent>
+      </section>
+
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <footer>
+        <div className="m-[15px] bg-[#F65252] px-[150px] py-[65px]">
+          <div className="flex justify-between">
+            <div>
+              wdqw
+            </div>
+            <div>
+              qwdqwd
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
