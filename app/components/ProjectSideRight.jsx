@@ -3,34 +3,37 @@ import MoreDetails from "./MoreDetail";
 
 const ProjectSideRightComponent = (data) =>{
     return(
-        <div className="flex ">
+
+        <div className="flex">
             <div className="mr-9">
-                <div className="relative img-warp">
-                    <div className="animation-content-wrapper">
-                        <div className="project-content-image">
-                            <Image src={data.image} height={160} width={669}/>
+                <a href={data.url}>
+                    <div className="relative img-warp">
+                        <div className="animation-content-wrapper">
+                            <div className="project-content-image">
+                                <Image src={data.image} height={160} width={669}/>
+                            </div>
+                        </div>
+                        <div className=" absolute -bottom-[65px] -right-[65px]" style={{transform: `skewX(50deg)`}}>
+                            <MoreDetails/>
                         </div>
                     </div>
-                    <div className=" absolute -bottom-[65px] -right-[65px]" style={{transform: `skewX(50deg)`}}>
-                        <MoreDetails/>
-                    </div>
-                </div>
+                </a>
             </div>
             <div className="flex flex-col text-white">
                 <div className="font-semibold text-[25px] leading-tight mt-[10px] mb-[20px]">
                     <div className="animation-content-wrapper">
-                            <h1 className="project-content-title">Eva_</h1>
+                            <h1 className="project-content-title">{data.titleLine_1}<span className="text-red-500">_</span></h1>
                         </div>
                         <div className="animation-content-wrapper">
-                            <h1 className="project-content-title">Loginova</h1>
+                            <h1 className="project-content-title">{data.titleLine_2}</h1>
                         </div>
                     </div>
                 <div className="text-[#ffffffb2] leading-tight ml-[50px]">
                     <div className="animation-content-wrapper">
-                        <p className="project-content-title">Портфолио Евы Логиновой,</p> 
+                        <p className="project-content-title">{data.line_1}</p> 
                     </div>
                     <div className="animation-content-wrapper">
-                        <p className="project-content-title">специалиста в сфере питания.</p> 
+                        <p className="project-content-title">{data.line_2}</p> 
                     </div>
                 </div>
             </div>
