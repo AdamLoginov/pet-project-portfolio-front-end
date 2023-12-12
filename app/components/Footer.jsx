@@ -9,11 +9,11 @@ const Footer = () =>{
     }
     return(
         <footer>
-            <div className="m-[15px] bg-[#F65252] px-[150px] py-[65px]">
-                <div className="flex justify-between">
+            <div className="m-[15px] bg-[#F65252] lg:px-[150px] py-[65px]">
+                <div className="flex justify-center lg:justify-between">
                     <div>
                         <ul className=" uppercase font-[600] text-[1rem] flex text-white tracking-wide">
-                            <li className="ml-[20px] lets-contact-white">
+                            <li className="lets-contact-white">
                                 <a href="https://instagram.com/_mishikk?igshid=NzZlODBkYWE4Ng==" target="_blank">
                                     instagram
                                 </a>
@@ -30,7 +30,7 @@ const Footer = () =>{
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div className=" hidden lg:block">
                         <ul className="font-[400] text-[1rem] flex text-white tracking-wide">
                             <li className="lets-contact-white">
                                 <a className="select-none" onClick={() => scrollToAnchor('startContent')}>

@@ -3,7 +3,7 @@ import React from 'react';
 
 const AnimatedCircle = () => {
   return (
-    <svg className="animated-circle" width="403px" height="403px" viewBox="0 0 403 403">
+    <svg className="animated-circle" viewBox="0 0 403 403">
       <g id="btn-circle-wrap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="btn-circle-wrapper" transform="translate(-237.000000, -465.000000)">
           <g id="btn-circle" transform="translate(166.000000, 466.000000)">

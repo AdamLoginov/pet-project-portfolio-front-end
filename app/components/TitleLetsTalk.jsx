@@ -8,7 +8,7 @@ const TitleLetsTalkComponent = () =>{
         }
     }
     return(
-        <div className="flex flex-col text-[8.5rem] font-semibold leading-none">
+        <div className="flex flex-col text-[3.8rem] lg:text-[8.5rem] font-semibold leading-none ml-[40px] lg:ml-[0px]">
             <div className="animation-content-wrapper">
                 <p id="about-me-1" className="about-me-content">Если у вас</p>
             </div>

@@ -47,6 +47,8 @@ body {
   animation: slideUp 1.5s forwards;
   display: inline-block;
   transform: translateY(150%);
+
+  line-height: 1.2;
 }
 
 .arrow-content{
@@ -140,11 +142,16 @@ body {
   transition: opacity 0.5s ease; 
 }
 
-#showConcept:hover + #concept,
-#concept:hover {
+#concept.visible {
   opacity: 1;
   pointer-events: auto;
 }
+
+/* #showConcept:hover + #concept,
+#concept:hover {
+  opacity: 1;
+  pointer-events: auto;
+} */
 
 .link-contact{
   color:#fff;
@@ -229,6 +236,14 @@ body {
   &:hover::after {
       transform: scaleX(1); /* линия подчеркивания становится видимой */
       transform-origin: bottom left;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lets-contact {
+    &::after {
+      height: 5px; /* высота линии подчеркивания */
+    }
   }
 }
 

@@ -1,5 +1,6 @@
+import React from "react"
+
 import Header from "./components/Header"
-import Date from "./components/Date"
 import Slider from "./components/Slider"
 import AnimateComponent from "./components/AnimateComponent"
 
@@ -11,12 +12,11 @@ import ProjectSideLeftComponent from "./components/ProjectSideLeft"
 import ProjectSideRightComponent from "./components/ProjectSideRight"
 
 import ContentOfMeComponent from "./components/ContentOfMe"
+import ShowConceptComponent from "./components/ShowConceptComponent"
 
 import Footer from "./components/Footer"
 
 import ArrowIcon from "./components/ArrowIcon"
-import Circle from "./components/Circle"
-import MoreDetails from "./components/MoreDetail"
 
 import image1 from"../public/img/projects/concept-2.webp"
 import image2 from"../public/img/projects/concept-3.webp"
@@ -46,20 +46,23 @@ export default function Home() {
     <main>
       <div className="max-w-[1529px] mx-auto relative">
         <Header/>
-        <div id="startContent" className="text-white text-[9.5rem] font-semibold uppercase ml-[65px]">
+        <div id="startContent" className="text-white mt-[40px] lg:mt-[0px] text-[5rem] lg:text-[9.5rem] font-semibold uppercase ml-[40px] 
+        lg:ml-[65px] relative z-20">
           <div className="animation-content-wrapper">
-            <h1 className="title-content">Hello<span className="text-[#F65252]">.</span></h1>
+            <h1 className="title-content ">Hello<span className="text-[#F65252]">.</span></h1>
           </div>
           <div className="animation-content-wrapper">
-            <h1 className="title-content">I am Michail</h1>
+            <h1 className="title-content -mt-[15px] lg:mt-[0px]">I am Michail</h1>
           </div>
-          <div className="flex  absolute left-[973px]">
+          <div className="flex absolute lg:left-[908px]">
             <div className="animation-content-wrapper">
               <div className="arrow-content">
-                <ArrowIcon/>
+                <div className="w-[55px] lg:w-[75px]">
+                  <ArrowIcon/>
+                </div>
               </div>
             </div>
-            <div className="text-[1.4rem] leading-tight flex flex-col  ml-[2rem]">
+            <div className="text-[1rem] lg:text-[1.4rem] leading-tight flex flex-col ml-[2rem] z-0">
               <div className="animation-content-wrapper">
                 <h1 className="more-content">Developer</h1>
               </div>
@@ -73,46 +76,17 @@ export default function Home() {
           </div>
         </div>
 
-
-        <section className="mt-[110px] pl-[120px] relative ">
-            <div id='showConcept' className="relative inline-block">
-              <Circle/>
-              <div  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold
-              text-[#ffffff54] text-[23px] uppercase leading-tight select-none">
-                <div className="animation-content-wrapper">
-                  <span className="block show-project-content tracking-[3px]">мои</span>
-                </div>
-                <div className="animation-content-wrapper">
-                  <span className="block show-project-content tracking-[3px]">проекты</span>
-                </div>
-              </div>
-              <Date />
-
-              <div className="text-[#ffffffb2] text-[17px] absolute whitespace-nowrap left-3/4 top-[250px]">
-                <div className="animation-content-wrapper">
-                  <p id="about-content-1" className="about-content">Я разработчик и UX/UI дизайнер из России.</p>
-                </div>
-                <div className="animation-content-wrapper">
-                  <p id="about-content-2" className="about-content">Клиенты из разных стран доверяли мне в вопросах дизайна,</p>
-                </div>
-                <div className="animation-content-wrapper">
-                  <p id="about-content-3" className="about-content">разработки, внедрения и управления их цифровыми продуктами.</p>
-                </div>
-                <div  className=" animation-content-wrapper">
-                  <p id="about-content-4" className="about-content">
-                    Как фрилансер, я также сотрудничаю с веб-агенствами
-                  </p>
-                </div>
-                <div className="animation-content-wrapper">
-                  <p id="about-content-5" className="about-content">и компаниями, внося свой вклад в различные проекты.</p>
-                </div>
-              </div>
-            </div>
-
-            <div id='concept' className="absolute top-0 right-0 ">
-              <Slider images={sliderImages}/>
-            </div>
+        <section className="mt-[150px] lg:mt-[110px] pl-[40px] lg:pl-[120px] relative">
+          <ShowConceptComponent/>
         </section>
+
+        <div id='concept' className="absolute z-10 top-[300px] right-[0px] lg:top-[650px] lg:right-0 ">
+          <div className="w-[300px] lg:w-auto">
+            <Slider images={sliderImages}/>
+          </div>
+        </div>
+
+
 
         <section className="mt-[200px] text-white ">
           <div id="ideas">
@@ -121,7 +95,7 @@ export default function Home() {
             </AnimateComponent>
           </div>
 
-          <div className="mb-[150px] mx-auto max-w-[1100px] pl-[60px]">
+          <div className=" mb-[50px] lg:mb-[150px] mx-auto max-w-[1100px] pl-[40px] lg:pl-[60px]">
             <AnimateComponent>
               <ProjectSideLeftComponent image={monument1} titleLine_1={"scroll"} titleLine_2={"parallax"}
               line_1={"Эффект движения фона"} line_2={"при прокрутке страницы."}
@@ -129,7 +103,7 @@ export default function Home() {
             </AnimateComponent>
           </div>
 
-          <div className="mb-[150px] mx-auto max-w-[1100px]">
+          <div className="mb-[50px] lg:mb-[150px] mx-auto max-w-[1100px] pl-[40px] lg:pl-[0px]">
             <AnimateComponent>
               <ProjectSideRightComponent image={monument2} titleLine_1={"3D"} titleLine_2={"parallax"}
               line_1={"Эффект движения фона"} line_2={"при движении мыши."}
@@ -137,7 +111,7 @@ export default function Home() {
             </AnimateComponent>
           </div>
 
-          <div className=" mb-[150px] mx-auto max-w-[1100px] pl-[60px]">
+          <div className=" mb-[50px] lg:mb-[150px] mx-auto max-w-[1100px] pl-[40px] lg:pl-[60px]">
             <AnimateComponent>
               <ProjectSideLeftComponent image={monument3} titleLine_1={"scroll"} titleLine_2={"creative"}
               line_1={"Анимация элементов"} line_2={"при прокрутке страницы."}
@@ -146,7 +120,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="block mt-[200px] text-white max-w-[1220px] mx-auto">
+        <section className="block mt-[150px] lg:mt-[200px] text-white max-w-[1220px] mx-auto">
           <div id="ofMe">
             <AnimateComponent>
               <TitleOfMeComponent/>
@@ -160,7 +134,7 @@ export default function Home() {
 
         </section>
 
-        <section className="mt-[200px] mb-[200px] text-white max-w-[1220px] mx-auto">
+        <section className="mt-[150px] lg:mt-[200px] mb-[150px] lg:mb-[200px] text-white max-w-[1220px] mx-auto">
           <AnimateComponent>
             <TitleLetsTalkComponent/>
           </AnimateComponent>
