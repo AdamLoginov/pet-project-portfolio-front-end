@@ -230,7 +230,6 @@ body {
 
 .lets-contact {
   position: relative;
-  display: inline-block;
   text-decoration: none;
   color: #F65252; /* цвет текста */
 
@@ -255,7 +254,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .lets-contact {
     &::after {
       height: 5px; /* высота линии подчеркивания */
