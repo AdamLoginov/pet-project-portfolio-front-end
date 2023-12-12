@@ -162,10 +162,18 @@ body {
   color:#ffffffb2;
 }
 
+.title-project-content{
+  display: none;
+}
+
 .activate .title-project-content{
   animation: slideUp 1.5s forwards;
   display: inline-block;
   transform: translateY(150%);
+}
+
+.project-content-title{
+  display: none;
 }
 
 .activate .project-content-title{
@@ -174,10 +182,18 @@ body {
   transform: translateY(150%);
 }
 
+.project-content-image{
+  display: none;
+}
+
 .activate .project-content-image{
   animation: slideDown 1.5s forwards;
   display: inline-block;
   transform: translateY(150%);
+}
+
+.about-me-content{
+  display: none;
 }
 
 .activate .about-me-content{
