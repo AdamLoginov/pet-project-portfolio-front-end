@@ -13,7 +13,7 @@ const ProjectSideRightComponent = (data) =>{
                                 <Image src={data.image} height={160} width={669}/>
                             </div>
                         </div>
-                        <div className=" absolute -bottom-[65px] lg:-right-[65px]" style={{transform: `skewX(50deg)`}}>
+                        <div className=" hidden lg:block absolute -bottom-[65px] lg:-right-[65px]" style={{transform: `skewX(50deg)`}}>
                             <MoreDetails/>
                         </div>
                     </div>
