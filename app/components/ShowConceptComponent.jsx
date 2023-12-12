@@ -44,7 +44,7 @@ const ShowConceptComponent = () =>{
 
             <Date/>
 
-            <div className="text-[#ffffffb2] text-[11px] lg:text-[17px] absolute whitespace-nowrap -left-[15px] lg:left-3/4 top-[250px]">
+            <div className="text-[#ffffffb2] text-[11px] lg:text-[17px] absolute whitespace-nowrap -left-[30px] top-[230px] lg:left-3/4 lg:top-[250px]">
                 <div className="animation-content-wrapper">
                     <p id="about-content-1" className="about-content">Я разработчик и UX/UI дизайнер из России.</p>
                 </div>

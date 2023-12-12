@@ -80,7 +80,7 @@ export default function Home() {
           <ShowConceptComponent/>
         </section>
 
-        <div id='concept' className="absolute z-10 top-[300px] right-[0px] lg:top-[650px] lg:right-0 ">
+        <div id='concept' className="absolute z-10 top-[290px] right-[0px] lg:top-[650px] lg:right-0 ">
           <div className="w-[300px] lg:w-auto">
             <Slider images={sliderImages}/>
           </div>

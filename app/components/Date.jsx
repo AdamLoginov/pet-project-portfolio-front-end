@@ -18,7 +18,7 @@ const DateComponent = () =>{
     }, []);
 
     return(
-        <div className="text-white absolute top-[40px] lg:top-1 left-[160px] lg:left-3/4 flex ">
+        <div className="text-white absolute top-[40px] lg:top-1 left-[150px] lg:left-3/4 flex ">
             <div className="animation-content-wrapper">
                 <span className="text-[65px] lg:text-[140px] text-transparent date-content leading-none">{dateOfMonth}</span>
             </div>
