@@ -78,7 +78,7 @@ export default function Home() {
             <div id='showConcept' className="relative inline-block">
               <Circle/>
               <div  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold
-              text-[#ffffff54] text-[23px] uppercase leading-tight">
+              text-[#ffffff54] text-[23px] uppercase leading-tight select-none">
                 <div className="animation-content-wrapper">
                   <span className="block show-project-content tracking-[3px]">мои</span>
                 </div>

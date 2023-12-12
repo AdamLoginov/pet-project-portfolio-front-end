@@ -33,7 +33,7 @@ const Footer = () =>{
                     <div>
                         <ul className="font-[400] text-[1rem] flex text-white tracking-wide">
                             <li className="lets-contact-white">
-                                <a onClick={() => scrollToAnchor('startContent')}>
+                                <a className="select-none" onClick={() => scrollToAnchor('startContent')}>
                                     вверх
                                 </a>
                             </li>

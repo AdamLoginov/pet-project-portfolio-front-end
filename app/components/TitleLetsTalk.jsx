@@ -23,7 +23,7 @@ const TitleLetsTalkComponent = () =>{
                 </p>
             </div>
             <div className="animation-content-wrapper">
-                <a id="about-me-4" onClick={() => scrollToAnchor('ofMe')} className="about-me-content text-red-500 lets-contact">свяжитесь</a>
+                <a id="about-me-4" onClick={() => scrollToAnchor('ofMe')} className="about-me-content text-red-500 lets-contact select-none">свяжитесь</a>
             </div>
             <div className="animation-content-wrapper">
                 <p id="about-me-5" className="about-me-content">со мной
